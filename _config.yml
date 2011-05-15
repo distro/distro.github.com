@@ -1,2 +1,12 @@
 auto: true
-pygments: true
+pygments: false
+
+markdown: kramdown
+
+kramdown:
+  use_coderay: true
+
+  coderay:
+    coderay_bold_every: 0
+    coderay_line_numbers:
+    coderay_css: class

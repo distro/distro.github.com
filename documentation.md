@@ -3,4 +3,4 @@ title: Distrø Documentation
 layout: default
 ---
 
-^_^
+[Packø documentation](/docs/packo/index.html)
