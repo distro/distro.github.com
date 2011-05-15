@@ -16,6 +16,18 @@ code, pre {
   font-family: Terminus, Courier New, Terminal, monospace;
 }
 
+pre {
+  margin: 0;
+  padding: 0;
+
+  width: 98%;
+  padding: 5px;
+  margin: 0 auto;
+
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
 #container {
   width: 80%;
   margin: 0 auto;
