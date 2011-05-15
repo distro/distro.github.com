@@ -14,7 +14,7 @@ examples which may be of use when trying to grasp the basic idea of how rbuilds 
 For proper coverage of all the ins and outs, see [Rbuild Writing](/docs/packo/rbuild-writing.html).
 The [General Concepts](/docs/packo/general-concepts.html) chapter will also be of use. 
 
-Note that the examples used here, whilst based upon real tree ebuilds, have had several parts chopped
+Note that the examples used here, whilst based upon real tree rbuilds, have had several parts chopped
 out, changed and simplified.
 
 First rbuild
