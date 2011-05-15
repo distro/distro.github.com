@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ page.title }}</title>
+
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+        <link rel="stylesheet" type="text/css" href="/css/default.css" />
+        <link rel="icon" type="image/png" href="/favicon.gif" />
+    </head>
+
+    <body>
+        <div id="container">
+            <a href="/index.html"><div id="header">
+                Distr<img id="logo" src="/images/logo_cropped.png" />
+
+                <span id="phrase">
+                    <span class="first">The</span>
+
+                    <table class="second">
+                        <tr><td>kernel</td>
+                            <td rowspan="3"><span class="agnostic">Agnostic</span></td>
+                        </tr>
+                        <tr><td>compiler</td></tr>
+                        <tr><td>libc</td></tr>
+                    </table>
+
+                    <span class="third">Distribution</span>
+                </span>
+            </div></a>
+
+            <div id="menu">
+                <a href="/index.html">Home</a>
+                <a href="/documentation.html">Documentation</a>
+                <a href="/about.html">About</a>
+            </div>
+
+            <div id="content">{{ content }}</div>
+
+            {% if page.comments %}
+
+            <div id="disqus_thread">
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+
+            <script type="text/javascript">
+                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                var disqus_shortname = 'distro'; // required: replace example with your forum shortname
+
+                // The following are highly recommended additional parameters. Remove the slashes in front to use.
+                // var disqus_identifier = 'unique_dynamic_id_1234';
+                // var disqus_url = 'http://example.com/permalink-to-page.html';
+
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+
+            {% endif %}
+        </div>
+    </body>
+</html>

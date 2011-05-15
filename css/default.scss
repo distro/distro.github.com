@@ -1,0 +1,165 @@
+---
+---
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: Verdana;
+  font-size: 12px;
+
+  background: white;
+  color: black;
+}
+
+#container {
+  width: 80%;
+  margin: 0 auto;
+
+  #header {
+    font-size: 123px;
+    text-align: center;
+    color: black;
+    cursor: default;
+
+    #logo {
+      height: 0.6em;
+      position: relative;
+      top: 0.05em;
+    }
+
+    #phrase {
+      font-size: 23px;
+      vertical-align: middle;
+
+      .second {
+        display: inline;
+        position: relative;
+        top: 5px;
+        text-align: left;
+
+        td {
+          font-size: 12px;
+          font-style: italic;
+        }
+
+        .agnostic {
+          font-style: normal;
+          font-size: 23px;
+        }
+      }
+    }
+  }
+
+  #menu {
+    font-size: 16px;
+    text-align: center;
+
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+
+    padding: 3px;
+
+    a {
+      color: #333;
+      font-weight: bold;
+      text-decoration: none;
+
+      &:hover {
+        color: #a591b2;
+      }
+
+      margin-right: 5px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  #content {
+    padding: 5px;
+
+    a {
+      color: #333;
+      font-weight: bold;
+      text-decoration: none;
+
+      &:hover {
+        color: #a591b2;
+      }
+    }
+  }
+}
+
+#content {
+  .post {
+    .header {
+      h2 {
+        float: left;
+        margin: 0;
+        font-size: 16px;
+
+        a {
+          color: black;
+          text-decoration: none;
+        }
+      }
+
+      .date {
+        float: right;
+        font-style: italic;
+        font-size: 12px;
+      }
+    }
+  }
+
+  #posts {
+    width: 79%;
+    float: left;
+
+    .post {
+      border-bottom: 1px solid black;
+    }
+
+    .archive {
+      text-align: right;
+      padding-top: 2px;
+    }
+  }
+
+  #twitter_update_list {
+    width: 19%;
+    float: right;
+
+    margin-top: 5px;
+
+    li {
+      list-style-type: none;
+      padding-left: 10px;
+      border-left: 2px solid black;
+      margin-bottom: 5px;
+    }
+
+    span {
+      color: black;
+    }
+
+    a {
+      display: block;
+      color: #333;
+
+      &:hover {
+        color: #a591b2;
+      }
+    }
+  }
+}
+
+#disqus_thread {
+  border-top: 1px solid black;
+  padding-top: 5px;
+}
