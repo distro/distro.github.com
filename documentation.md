@@ -13,7 +13,7 @@ detailed, up to date technical content.
 
 Contributors
 ------------
-Contributions are encouraged. See the [contributing](/docs/contributing.html) section for how to get started.
+Contributions are encouraged. See the [contributing](/contributing.html#documentation) section for how to get started.
 
 If you have any corrections, suggestions or improvements please open an issue
 [here](https://github.com/distro/distro.github.com/issues).
@@ -24,7 +24,7 @@ Thanks to the contributors from http://devmanual.gentoo.org/ for the style and c
 
 Contents
 --------
-* [Contributing](/docs/contributing.html)
+* [Contributing](/contributing.html#documentation)
 * [Packø](/docs/packo/index.html)
 * + [Quickstart Rbuild Guide](/docs/packo/quickstart.html)
 * + [General concepts](/docs/packo/general-concepts.html)

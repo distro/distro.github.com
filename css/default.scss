@@ -108,6 +108,15 @@ a {
 }
 
 #content {
+  h1 {
+    border-top: 1px dashed black;
+    border-bottom: 1px dashed black;
+  }
+
+  h2 {
+    border-bottom: 1px dotted black;
+  }
+
   .post {
     .header {
       h2 {
