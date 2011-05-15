@@ -5,7 +5,7 @@ layout: default
 comments: true
 ---
 
-Packo Development Guide
+Packø Development Guide
 =======================
 This document is an ongoing work in progress. It contains gaps, inaccuracies, omissions, typos and
 the occasional outright lie. The intent is to make a handbook giving developers and users correct,
