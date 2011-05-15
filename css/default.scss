@@ -61,6 +61,8 @@ a {
     #phrase {
       font-size: 23px;
       vertical-align: middle;
+      white-space: nowrap;
+      display: inline;
 
       .second {
         display: inline;
