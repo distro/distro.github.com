@@ -93,7 +93,7 @@ a {
     padding: 3px;
 
     a {
-      margin-right: 5px;
+      margin-right: 10px;
 
       &:last-child {
         margin-right: 0;
@@ -143,11 +143,15 @@ a {
     }
   }
 
-  #twitter_update_list {
+  #twitter {
     width: 19%;
     float: right;
 
     margin-top: 5px;
+
+    & > a {
+      position: relative;
+    }
 
     li {
       list-style-type: none;
