@@ -140,6 +140,8 @@ a {
     .archive {
       text-align: right;
       padding-top: 2px;
+      font-size: 10px;
+      text-transform: uppercase;
     }
   }
 
@@ -158,10 +160,15 @@ a {
       padding-left: 10px;
       border-left: 2px solid black;
       margin-bottom: 5px;
-    }
 
-    span {
-      color: black;
+      a {
+        display: block;
+        padding-top: 2px;
+      }
+
+      span {
+        color: black;
+      }
     }
   }
 }
