@@ -19,6 +19,12 @@
             background: white;
             color: black;
             text-align: center;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+        }
+
+        a {
+          color: black;
+          text-decoration: none;
         }
 
         #center {
@@ -30,7 +36,7 @@
             top: 50%;
         }
 
-        #bubble {
+        #message {
             background: white;
             position: absolute;
             top: 40px;
@@ -46,6 +52,41 @@
             border: 1px outset black;
         }
 
+        #line {
+            background: transparent;
+            position: absolute;
+            top: 63px;
+            right: 155px;
+
+            border-left: 2px solid black;
+        }
+
+        #back {
+            background: white;
+            position: absolute;
+            font-weight: bold;
+            font-size: 12px;
+            padding: 3px 5px;
+            width: 1em;
+            top: 80px;
+            left: 30px;
+
+            border: 1px dashed black;
+        }
+
+        #home {
+            background: white;
+            position: absolute;
+            font-weight: bold;
+            font-size: 12px;
+            padding: 3px 5px;
+            width: 1em;
+            top: 150px;
+            right: 10px;
+
+            border: 1px dashed black;
+        }
+
         </style>
     </head>
 
@@ -53,7 +94,10 @@
         <div id="center">
             <img src="/images/ditto.jpg">
 
-            <div id="bubble">Sowwy, I can't transform into that</div>
+            <div id="message">Sowwy, I can't transform into that</div>
+            <div id="line">&nbsp;</div>
+            <div id="back"><a href="javascript: history.go(-1);">B A C K</a></div>
+            <div id="home"><a href="/">H O M E</a></div>
         </div>
     </body>
 </html>
