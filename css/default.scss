@@ -59,7 +59,7 @@ a {
     }
 
     #phrase {
-      font-size: 23px;
+      font-size: 18px;
       vertical-align: middle;
       white-space: nowrap;
       display: inline;
@@ -67,7 +67,7 @@ a {
       .second {
         display: inline;
         position: relative;
-        top: 5px;
+        top: 4px;
         text-align: left;
 
         td {
@@ -76,8 +76,7 @@ a {
         }
 
         .agnostic {
-          font-style: normal;
-          font-size: 23px;
+          font-size: 18px;
         }
       }
     }
