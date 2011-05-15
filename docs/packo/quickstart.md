@@ -2,6 +2,7 @@
 title: RBuild Development Quickstart
 layout: default
 
+license: meh-cc
 comments: true
 ---
 

@@ -18,7 +18,7 @@ Contributions are encouraged. See the [contributing](/docs/contributing.html) se
 If you have any corrections, suggestions or improvements please open an issue
 [here](https://github.com/distro/distro.github.com/issues).
 
-* meh <meh@paranoici.org>
+* meh. <meh@paranoici.org>
 
 Thanks to the contributors from http://devmanual.gentoo.org/ for the style and contents inspiration.
 
@@ -28,3 +28,4 @@ Contents
 * [Packø](/docs/packo/index.html)
 * + [Quickstart Rbuild Guide](/docs/packo/quickstart.html)
 * + [General concepts](/docs/packo/general-concepts.html)
+* + [Building Systems](/docs/packo/building-systems.html)
