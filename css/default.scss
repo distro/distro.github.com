@@ -34,9 +34,22 @@ a {
   color: #333;
   font-weight: bold;
   text-decoration: none;
+  border-bottom: 1px dotted black;
 
   &:hover {
     color: #a591b2;
+  }
+}
+
+h1, h2 {
+  a {
+    border-bottom: 0;
+  }
+}
+
+ul.contents {
+  a {
+    border-bottom: 0;
   }
 }
 
@@ -93,6 +106,7 @@ a {
 
     a {
       margin-right: 10px;
+      border: 0;
 
       &:last-child {
         margin-right: 0;
@@ -150,6 +164,10 @@ a {
       padding-top: 2px;
       font-size: 10px;
       text-transform: uppercase;
+
+      a {
+        border: 0;
+      }
     }
   }
 
@@ -158,6 +176,10 @@ a {
     float: right;
 
     margin-top: 5px;
+
+    a {
+      border: 0;
+    }
 
     & > a {
       position: relative;

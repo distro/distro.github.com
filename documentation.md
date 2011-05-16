@@ -24,6 +24,8 @@ Thanks to the contributors from http://devmanual.gentoo.org/ for the style and c
 
 Contents
 --------
+
+{:class="contents"}
 * [Contributing](/contributing.html#documentation)
 * [Packø](/docs/packo/index.html)
 * + [Quickstart Rbuild Guide](/docs/packo/quickstart.html)

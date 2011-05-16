@@ -24,8 +24,7 @@ We'll start with an rbuild for the Exuberant Ctags utility, a source code indexi
 
 ctags.rbuild:
 
-{:lang="ruby"}
-~~~
+{% highlight ruby %}
 Package.define('ctags') {
   tags 'application', 'development', 'utility'
 
@@ -50,19 +49,18 @@ Package.define('ctags') {
     package.do.html 'EXTENDING.html', 'ctags.html'
   end
 }
-~~~
+{% endhighlight %}
 
 ctags-5.8.rbuild
 
-{:lang="ruby"}
-~~~
+{% highlight ruby %}
 Package.define('ctags', '5.8') {
   arch     'x86', 'x86_64'
   kernel   'linux', 'windows'
   compiler 'gcc'
   libc     'glibc'
 }
-~~~
+{% endhighlight %}
 
 Basic format
 ------------
@@ -129,8 +127,7 @@ the rbuild, the other way is to embed the files in the rbuild.
 If the files are small, like patches or short configuration examples it's suggested to use the
 embedding facilities rather than having a data directory floating around.
 
-{:lang="ruby"}
-~~~
+{% highlight ruby %}
 Package.define('sandbox') {
   tags 'application', 'system'
 
@@ -162,7 +159,7 @@ SANDBOX_WRITE="/var/lib/packo"
 
 SANDBOX_READ="${HOME}/.packo"
 SANDBOX_WRITE="${HOME}/.packo"
-~~~
+{% endhighlight %}
 
 As you can see we have the usual informational variables and then a callback that refers to a
 package.filesystem variable.
@@ -180,8 +177,7 @@ ctags only needs a basic toolchain to compile and run. However, life is rarely t
 
 Here's `application/system/detox`:
 
-{:lang="ruby"}
-~~~
+{% highlight ruby %}
 Package.define('detox') {
   tags 'application', 'system'
 
@@ -202,7 +198,7 @@ Package.define('detox') {
     package.do.doc 'README', 'CHANGES'
   end
 }
-~~~
+{% endhighlight %}
 
 Again, you can see the rbuild various informational variables.
 
@@ -217,8 +213,7 @@ Rbuild with patches
 Often we need to apply patches. This can be done in two ways, by adding a patches directory (in data/
 or embedded), these patches are used by the module Building::Patch appropriately.
 
-{:lang="ruby"}
-~~~
+{% highlight ruby %}
 Package.define('detox') {
   tags 'application', 'system'
 
@@ -293,7 +288,7 @@ https://sourceforge.net/tracker/index.php?func=detail&aid=2166387&group_id=10161
     ${INSTALL} -m 644 detoxrc ${DESTDIR}${sysconfdir}/detoxrc.sample
     ${INSTALL} -m 644 iso8859_1.tbl ${DESTDIR}${datadir}/detox/iso8859_1.tbl.sample
     ${INSTALL} -m 644 unicode.tbl ${DESTDIR}${datadir}/detox/unicode.tbl.sample
-~~~
+{% endhighlight %}
 
 For bigger sets of patches it's suggested to use archives, see
 [Building::Patch](/docs/packo/reference/Building::Patch.html) for more informations.
@@ -302,8 +297,7 @@ Rbuild with features
 ====================
 Now for some `features`. Here's `application/mail/client/sylpheed`.
 
-{:lang="ruby"}
-~~~
+{% highlight ruby %}
 Package.define('sylpheed') {
   tags 'application', 'mail', 'client'
 
@@ -396,7 +390,7 @@ Package.define('sylpheed') {
     package.do.doc 'AUTHORS', 'ChangeLog*', 'NEWS*', 'README*', 'TODO*'
   end
 }
-~~~
+{% endhighlight %}
 
 As you can see features have their own block and they can hook to callbacks like out of a feature.
 
