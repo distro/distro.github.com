@@ -186,6 +186,7 @@ ul.contents {
     }
 
     li {
+      font-size: 10px;
       list-style-type: none;
       padding-left: 10px;
       border-left: 2px solid black;
@@ -197,6 +198,11 @@ ul.contents {
       }
 
       span {
+        a {
+          display: inline;
+          padding: 0;
+        }
+
         color: black;
       }
     }
