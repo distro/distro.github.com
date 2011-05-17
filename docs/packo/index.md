@@ -80,8 +80,8 @@ Common problems
     to, so sandbox killed the process to prevent damages, if you're sure you wanted it to access that place configure
     `sandbox` to be able to do so. Read `sandbox`'s documentation to know how.
 
-*   If you can't install `sandbox` and `fakeroot` you can use packo anyway, just don't use the protected syntax (packo &lt;command&gt;) but use
-    packo-&lt;command&gt; which is the not secure way. I suggest getting `sandbox` and `fakeroot` anyway because packages could do something harmful by mistake or on purpose, you can never know.
+*   If you can't install `sandbox` and `fakeroot` you can use packo anyway, just don't use the protected syntax (packo `<command>`) but use
+    `packo-<command>` which is the not secure way. I suggest getting `sandbox` and `fakeroot` anyway because packages could do something harmful by mistake or on purpose, you can never know.
 
 It's slow as hell :(
 --------------------
