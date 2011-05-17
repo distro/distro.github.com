@@ -1,6 +1,8 @@
 ---
 title: Contributing to Distrø
 layout: documentation
+
+lang: en
 ---
 
 Contributing

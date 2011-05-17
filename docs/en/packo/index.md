@@ -1,6 +1,8 @@
 ---
 title: Packø Documentation
 layout: documentation
+
+lang: en
 ---
 
 Packø

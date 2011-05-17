@@ -1,6 +1,8 @@
 ---
 title: General Concepts
 layout: documentation
+
+lang: en
 ---
 
 This section covers some general concepts with which you should be familiar when writing rbuilds
