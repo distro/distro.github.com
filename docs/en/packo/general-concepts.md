@@ -1,9 +1,6 @@
 ---
 title: General Concepts
-layout: default
-
-license: meh-cc
-comments: true
+layout: documentation
 ---
 
 This section covers some general concepts with which you should be familiar when writing rbuilds

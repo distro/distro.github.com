@@ -1,8 +1,6 @@
 ---
 title: Distrø Documentation
-layout: default
-
-comments: true
+layout: documentation
 ---
 
 Distrø documentation
@@ -26,8 +24,8 @@ Contents
 --------
 
 {:class="contents"}
-* [Contributing](/contributing.html#documentation)
+* [Contributing](/docs/en/contributing.html#documentation)
 * [Packø](/docs/packo/index.html)
-* + [Quickstart Rbuild Guide](/docs/packo/quickstart.html)
-* + [General concepts](/docs/packo/general-concepts.html)
-* + [Building Systems](/docs/packo/building-systems.html)
+* + [Quickstart Rbuild Guide](/docs/en/packo/quickstart.html)
+* + [General concepts](/docs/en/packo/general-concepts.html)
+* + [Building Systems](/docs/en/packo/building-systems.html)

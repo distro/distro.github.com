@@ -33,35 +33,38 @@
 
             <div id="menu">
                 <a href="/">Home</a>
-                <a href="/documentation.html">Documentation</a>
-                <a href="/contributing.html">Contributing</a>
+                <a href="/docs/en/">Documentation</a>
+                <a href="/docs/en/contributing.html">Contributing</a>
                 <a href="/about.html">About</a>
             </div>
 
             <div id="content">{{ content }}</div>
 
             {% if page.comments %}
+                <div id="disqus_thread">
+                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                </div>
 
-            <div id="disqus_thread">
-                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-            </div>
+                <script type="text/javascript">
+                    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                    var disqus_shortname = 'distro'; // required: replace example with your forum shortname
 
-            <script type="text/javascript">
-                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-                var disqus_shortname = 'distro'; // required: replace example with your forum shortname
+                    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+                    // var disqus_identifier = 'unique_dynamic_id_1234';
+                    // var disqus_url = 'http://example.com/permalink-to-page.html';
 
-                // The following are highly recommended additional parameters. Remove the slashes in front to use.
-                // var disqus_identifier = 'unique_dynamic_id_1234';
-                // var disqus_url = 'http://example.com/permalink-to-page.html';
+                    /* * * DON'T EDIT BELOW THIS LINE * * */
+                    (function() {
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                </script>
+            {% endif %}
 
-                /* * * DON'T EDIT BELOW THIS LINE * * */
-                (function() {
-                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                })();
-            </script>
-
+            {% if page.tweets %}
+                <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+                <script type="text/javascript" src="http://twitter.com/statuses/user_timeline/DistroOS.json?callback=twitterCallback2&amp;count={{ page.tweets }}"></script>
             {% endif %}
         </div>
 

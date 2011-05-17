@@ -1,9 +1,6 @@
 ---
 title: Packø Documentation
-layout: default
-
-license: meh-cc
-comments: true
+layout: documentation
 ---
 
 Packø

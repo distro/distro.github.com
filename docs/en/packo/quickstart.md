@@ -1,9 +1,6 @@
 ---
 title: RBuild Development Quickstart
-layout: default
-
-license: meh-cc
-comments: true
+layout: documentation
 ---
 
 RBuild Development Quickstart

@@ -1,0 +1,22 @@
+---
+layout: default
+
+comments: true
+license: meh-cc
+
+languages:
+  - code: en
+  - code: it
+---
+
+<div class="languages">
+    {% for language in page.languages %}
+    <span class="language">
+      <a href="/docs/{{ language.code }}/">{% if language.name %}{{ language.name }}{% else %}{{ language.code }}{% endif %}</a>
+    </span>
+    {% endfor %}
+</div>
+
+<div class="documentation">
+    {{ content }}
+</div>

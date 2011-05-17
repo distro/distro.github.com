@@ -130,6 +130,16 @@ ul.contents {
     border-bottom: 1px dotted black;
   }
 
+  .languages {
+    text-align: right;
+    padding-bottom: 4px;
+
+    .language {
+      margin-left: 5px;
+      padding: 0;
+    }
+  }
+
   .post {
     .header {
       h2 {
