@@ -211,7 +211,8 @@ The default is both, to specify it as build put a `!` at the end and `!!` for ru
 Rbuild with patches
 ===================
 Often we need to apply patches. This can be done in two ways, by adding a patches directory (in data/
-or embedded), these patches are used by the module Building::Patch appropriately.
+or embedded), these patches are used by the module [Building::Patch](/docs/packo/reference/Building::Patch.html)
+appropriately.
 
 {% highlight ruby %}
 Package.define('detox') {
