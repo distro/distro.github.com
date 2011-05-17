@@ -1,14 +1,17 @@
 ---
 layout: default
+
 comments: true
 ---
 
 <div class="post">
-  <div class="header">
-    <h2>{{ page.title }}</h2>
+  <div class="header"><h2>
+    {{page.title}}
+    <span class="author">by <b>{{ page.author }}</b></span>
+
     <div class="date">{{ page.date | date:"%B %d, %Y" }}</div>
     <div style="clear: both"></div>
-  </div>
+  </h2></div>
 
   <div class="content">
     {{ content }}

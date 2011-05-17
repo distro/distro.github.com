@@ -147,7 +147,6 @@ ul.contents {
   .post {
     .header {
       h2 {
-        float: left;
         margin: 0;
         font-size: 16px;
 
@@ -155,12 +154,19 @@ ul.contents {
           color: black;
           text-decoration: none;
         }
-      }
 
-      .date {
-        float: right;
-        font-style: italic;
-        font-size: 12px;
+        .author {
+          font-size: 10px;
+          font-weight: normal;
+          border-bottom: 1px solid white;
+        }
+
+        .date {
+          font-weight: normal;
+          float: right;
+          font-style: italic;
+          font-size: 12px;
+        }
       }
     }
   }

@@ -1,5 +1,7 @@
 ---
 title: Frist Psot
+author: meh.
+
 layout: post
 ---
 
