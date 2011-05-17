@@ -59,6 +59,21 @@ it's really easy to write rbuils, so head to the [quickstart](/docs/packo/quicks
 start writing rbuilds for your favourite packages. As usual coordination on [IRC](#irc) or through
 issues is advised (and wanted).
 
+To easily contribute rbuilds you should fork [this](https://github.com/distro/source) repository
+on github and work on the multiverse branch.
+
+When you start working on an rbuild open an issue on that repository so everyone knows what rbuilds
+are being worked on and in what state they are.
+
+When you have done your rbuild, digested it (packo-build digest file.rbuild) (every version has to be
+digested) send a pull request, it will be merged as soon as possible and checked by a trusted user.
+
+When an rbuild is checked and made sure it's working and not dangerous it will be moved in the universe
+branch.
+
+To become a trusted user just write enough rbuilds, contribute enough and be present on IRC, if you
+aren't a dick you will become trusted :)
+
 Package manager writing
 -----------------------
 If you think the package manager misses a feature or a module head to the
