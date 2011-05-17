@@ -137,6 +137,10 @@ ul.contents {
     .language {
       margin-left: 5px;
       padding: 0;
+
+      a.current {
+        border-bottom: 2px solid black;
+      }
     }
   }
 

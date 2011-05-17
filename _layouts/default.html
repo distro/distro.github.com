@@ -5,6 +5,10 @@
 
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
+        {% if page.lang %}
+          <meta http-equiv="content-language" content="{{ page.lang }}">
+        {% endif %}
+
         <link rel="stylesheet" type="text/css" href="/css/default.css" />
         <link rel="stylesheet" type="text/css" href="/css/syntax.css" />
 

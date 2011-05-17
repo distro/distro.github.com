@@ -1,6 +1,8 @@
 ---
 title: Distrø Documentation
 layout: documentation
+
+lang: en
 ---
 
 Distrø documentation

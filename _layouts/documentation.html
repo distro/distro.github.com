@@ -11,9 +11,24 @@ languages:
 
 <div class="languages">
     {% for language in page.languages %}
-    <span class="language">
-      <a href="/docs/{{ language.code }}/">{% if language.name %}{{ language.name }}{% else %}{{ language.code }}{% endif %}</a>
-    </span>
+        {% assign code = language.code %}
+
+        {% if language.name %}
+            {% assign name = language.name %}
+        {% else %}
+            {% assign name = code %}
+        {% endif %}
+
+        {% capture old_prefix %}/docs/{{ page.lang }}/{% endcapture %}
+        {% capture new_prefix %}/docs/{{ code }}/{% endcapture %}
+
+        <span class="language">
+            <a href="{{ page.url | replace_first: old_prefix, new_prefix }}"
+                {% if page.lang == code %}
+                    class="current"
+                {% endif %}
+            >{{ name }}</a>
+        </span>
     {% endfor %}
 </div>
 

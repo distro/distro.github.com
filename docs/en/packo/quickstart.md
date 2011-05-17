@@ -1,6 +1,8 @@
 ---
 title: RBuild Development Quickstart
 layout: documentation
+
+lang: en
 ---
 
 RBuild Development Quickstart
