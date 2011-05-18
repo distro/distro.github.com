@@ -9,8 +9,10 @@ tweets: 7
   {% for post in site.posts %}
     <div class="post">
       <div class="header"><h2>
-        <a href="{{ post.url }}">{{post.title}}</a>
-        <span class="author">by <b>{{ post.author }}</b></span>
+        <a href="{{ post.url }}">{{ post.title | format_text }}</a>
+
+        <span class="author">by <b>{{ post.author | format_text }}</b></span>
+        <span class="categories">in <b>{{ post.categories | array_to_sentence_string }}</b></span>
 
         <div class="date">{{ post.date | date:"%B %d, %Y" }}</div>
         <div style="clear: both"></div>

@@ -6,8 +6,10 @@ comments: true
 
 <div class="post">
   <div class="header"><h2>
-    {{page.title}}
-    <span class="author">by <b>{{ page.author }}</b></span>
+    {{ page.title | format_text }}
+
+    <span class="author">by <b>{{ page.author | format_text }}</b></span>
+    <span class="categories">in <b>{{ page.categories | array_to_sentence_string }}</b></span>
 
     <div class="date">{{ page.date | date:"%B %d, %Y" }}</div>
     <div style="clear: both"></div>

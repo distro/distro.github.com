@@ -2,6 +2,9 @@
 title: Frist Psot
 author: meh.
 
+categories:
+  - random
+
 layout: post
 ---
 

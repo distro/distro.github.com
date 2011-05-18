@@ -155,10 +155,9 @@ ul.contents {
           text-decoration: none;
         }
 
-        .author {
+        .author, .categories {
           font-size: 10px;
           font-weight: normal;
-          border-bottom: 1px solid white;
         }
 
         .date {
@@ -177,6 +176,12 @@ ul.contents {
 
     .post {
       border-bottom: 1px solid black;
+
+      margin-top: 10px;
+
+      &:first-child {
+        margin-top: 0;
+      }
     }
 
     .archive {
