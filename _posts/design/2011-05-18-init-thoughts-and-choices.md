@@ -30,18 +30,36 @@ Packo::Service.define {
   needs 'net'
 
   start do
-    CLI.message 'Starting lighttpd...' do 
-      Daemon.new('/usr/sbin/lighttpd') {|d|
-        d.pid = config['pid'] || '/var/lighttpd/lighttpd.pid'
-      }.start('-f', config['configuration'] || '/etc/lighttpd/lighttpd.conf',
+    CLI.warn 'lighttpd is already started' and next if started?
+
+    daemon = Daemon.new('/usr/sbin/lighttpd') {|d|
+      d.pid = config['pid'] || '/var/run/lighttpd.pid'
+    }
+
+    CLI.message 'Starting lighttpd...' do
+      daemon.start('-f', config['configuration'] || '/etc/lighttpd/lighttpd.conf',
         save: false
       )  
     end
   end
 
   stop do
+    CLI.warn 'lighttpd is already stopped' and next if stopped?
+
+    daemon = Daemon.pid(config['pid'] || '/var/run/lighttpd.pid')
+      
     CLI.message 'Stopping lighttpd...' do
-      Daemon.pid(config['pid']).stop && Daemon.kill('php-cgi', :KILL)
+      (daemon.stop || daemon.stop(force: true)) && OS::Process.kill('php-cgi', :KILL)
+    end
+  end
+
+  status do
+    daemon = Daemon.pid(config['pid'] || '/var/run/lighttpd.pid')
+
+    if daemon
+      puts "started"
+    else
+      puts "stopped"
     end
   end
 }
