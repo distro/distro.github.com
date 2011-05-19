@@ -19,50 +19,47 @@ Being Distrø surrounded by Ruby I want init scripts to be written in Ruby as we
 like an ugly idea but I sincerely think that openrc is even more complex than going with Ruby.
 All that ugly bash, bleah.
 
-So here's what I have in mind, simple example, reduced:
+So here's what I have in mind:
 
 `/etc/init.d/lighttpd`:
 {% highlight ruby %}
-#! /usr/bin/env ruby
-require 'packo/service'
+#! /usr/bin/packo-service
 
-Packo::Service.define {
-  needs 'net'
+needs 'net'
 
-  start do
-    CLI.warn 'lighttpd is already started' and next if started?
+start do
+  CLI.warn 'lighttpd is already started' and next if started?
 
-    daemon = Daemon.new('/usr/sbin/lighttpd') {|d|
-      d.pid = config['pid'] || '/var/run/lighttpd.pid'
-    }
+  daemon = Daemon.new('/usr/sbin/lighttpd') {|d|
+    d.pid = config['pid'] || '/var/run/lighttpd.pid'
+  }
 
-    CLI.message 'Starting lighttpd...' do
-      daemon.start('-f', config['configuration'] || '/etc/lighttpd/lighttpd.conf',
-        save: false
-      )  
-    end
+  CLI.message 'Starting lighttpd...' do
+    daemon.start('-f', config['configuration'] || '/etc/lighttpd/lighttpd.conf',
+      save: false
+    )  
   end
+end
 
-  stop do
-    CLI.warn 'lighttpd is already stopped' and next if stopped?
+stop do
+  CLI.warn 'lighttpd is already stopped' and next if stopped?
 
-    daemon = Daemon.pid(config['pid'] || '/var/run/lighttpd.pid')
-      
-    CLI.message 'Stopping lighttpd...' do
-      (daemon.stop || daemon.stop(force: true)) && OS::Process.kill('php-cgi', :KILL)
-    end
+  daemon = Daemon.pid(config['pid'] || '/var/run/lighttpd.pid')
+    
+  CLI.message 'Stopping lighttpd...' do
+    (daemon.stop || daemon.stop(force: true)) && OS::Process.kill('php-cgi', :KILL)
   end
+end
 
-  status do
-    daemon = Daemon.pid(config['pid'] || '/var/run/lighttpd.pid')
+status do
+  daemon = Daemon.pid(config['pid'] || '/var/run/lighttpd.pid')
 
-    if daemon
-      puts "started"
-    else
-      puts "stopped"
-    end
+  if daemon
+    puts "started"
+  else
+    puts "stopped"
   end
-}
+end
 {% endhighlight %}
 
 `/etc/conf.d/lighttpd`:
