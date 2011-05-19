@@ -32,7 +32,7 @@ Packo::Service.define {
   start do
     CLI.message 'Starting lighttpd...' do 
       Daemon.new('/usr/sbin/lighttpd') {|d|
-        d.pid = config['pid']
+        d.pid = config['pid'] || '/var/lighttpd/lighttpd.pid'
       }.start('-f', config['configuration'] || '/etc/lighttpd/lighttpd.conf',
         save: false
       )  
@@ -53,6 +53,8 @@ configuration: /etc/lighttpd/lighttpd.conf
 pid:           /var/run/lighttpd.pid
 {% endhighlight %}
 
-Somehow it's segfaulting when using the stop though, will investigate tomorrow and finish this blog post.
+Making it clear for everyone, this doesn't mean you're forced to write your own init files in Ruby,
+the init just uses the shebang for interpreting it, so you can use `/bin/sh` or whatever you want to,
+the example above is just a proof that packo gives facilitations to write init files in Ruby.
 
-Sleep for now.
+In short, gonna support only sysvinit for now with Ruby init.d scripts and YAML conf.d configurations.
