@@ -6,7 +6,7 @@ tweets: 7
 ---
 
 <div id="posts">
-  {% for post in site.posts %}
+  {% for post in site.posts limit:1 %}
     <div class="post">
       <div class="header"><h2>
         <a href="{{ post.url }}">{{ post.title | format_text }}</a>
