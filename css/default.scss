@@ -144,6 +144,14 @@ ul.contents {
     }
   }
 
+  .warning {
+    text-align: center;
+    margin-top: 5px;
+    color: #b21818;
+    border-bottom: 2px solid #dd1818;
+    border-top: 2px solid #dd1818;
+  }
+
   .post {
     .header {
       h2 {

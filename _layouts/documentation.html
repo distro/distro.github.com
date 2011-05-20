@@ -32,6 +32,10 @@ languages:
     {% endfor %}
 </div>
 
+{% if page.stub %}
+    <div class="warning">This page is a <b>stub</b>, please help expanding and cleaning it.</div>
+{% endif %}
+
 <div class="documentation">
     {{ content }}
 </div>

@@ -3,7 +3,7 @@ title: About Distrø
 layout: default
 ---
 
-Distrø aims to be THE distribution.
+Distrø aims to be **THE** distribution.
 
 Kernel agnostic, libc agnostic, compiler agnostic.
 
