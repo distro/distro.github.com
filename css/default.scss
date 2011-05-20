@@ -152,6 +152,18 @@ ul.contents {
     border-top: 2px solid #dd1818;
   }
 
+  ul {
+    margin-left: 10px;
+
+    ul {
+      margin-left: 0;
+    }
+  }
+
+  li {
+    margin-left: -25px;
+  }
+
   .post {
     .header {
       h2 {

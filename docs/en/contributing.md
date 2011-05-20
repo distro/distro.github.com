@@ -3,6 +3,7 @@ title: Contributing to Distrø
 layout: documentation
 
 lang: en
+stub: true
 ---
 
 Contributing
