@@ -30,6 +30,6 @@ Contents
 * [General concepts](/docs/en/general-concepts.html)
 * + [Packages](/docs/en/general-concepts/packages.html)
 * + [Repositories](/docs/en/general-concepts/repositories.html)
-* [Packø](/docs/packo/index.html)
+* [Packø](/docs/en/packo/index.html)
 * + [Quickstart Rbuild Guide](/docs/en/packo/quickstart.html)
 * + [Building Systems](/docs/en/packo/building-systems.html)
