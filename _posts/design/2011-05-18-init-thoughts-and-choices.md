@@ -77,7 +77,7 @@ Another example with the shorthand generator:
 
 needs 'net'
 
-is name: 'rsyncd',
+this.is name: 'rsyncd',
   command: "rsync --daemon #{config['arguments']}",
 {% endhighlight %}
 
