@@ -68,6 +68,19 @@ configuration: /etc/lighttpd/lighttpd.conf
 pid:           /var/run/lighttpd.pid
 {% endhighlight %}
 
+
+Another example with the shorthand generator:
+
+`/etc/init.d/rsyncd`:
+{% highlight ruby %}
+#! /usr/bin/packo-service
+
+needs 'net'
+
+is name: 'rsyncd',
+  command: "rsync --daemon #{config['arguments']}",
+{% endhighlight %}
+
 Making it clear for everyone, this doesn't mean you're forced to write your own init files in Ruby,
 the init just uses the shebang for interpreting it, so you can use `/bin/sh` or whatever you want to,
 the example above is just a proof that packo gives facilitations to write init files in Ruby.
