@@ -13,7 +13,7 @@ detailed, up to date technical content.
 
 Contributors
 ------------
-Contributions are encouraged. See the [contributing](/contributing.html#documentation) section for how to get started.
+Contributions are encouraged. See the [contributing](/docs/en/contributing.html#documentation) section for how to get started.
 
 If you have any corrections, suggestions or improvements please open an issue
 [here](https://github.com/distro/distro.github.com/issues).
