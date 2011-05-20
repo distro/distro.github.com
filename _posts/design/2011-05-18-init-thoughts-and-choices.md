@@ -21,7 +21,7 @@ All that ugly bash, bleah.
 
 So here's what I have in mind:
 
-`/etc/init.d/lighttpd`:
+Long version of `/etc/init.d/lighttpd`:
 {% highlight ruby %}
 #! /usr/bin/packo-service
 
@@ -62,23 +62,24 @@ status do
 end
 {% endhighlight %}
 
-`/etc/conf.d/lighttpd`:
-{% highlight yaml %}
-configuration: /etc/lighttpd/lighttpd.conf
-pid:           /var/run/lighttpd.pid
-{% endhighlight %}
-
-
-Another example with the shorthand generator:
-
-`/etc/init.d/rsyncd`:
+Shorthand version of `/etc/init.d/lighttpd`:
 {% highlight ruby %}
 #! /usr/bin/packo-service
 
 needs 'net'
 
-this.is name: 'rsyncd',
-  command: "rsync --daemon #{config['arguments']}",
+this.is name: 'lighttpd',
+  command: "lighttpd -f '#{config['configuration'] || '/etc/lighttpd/lighttpd.conf'}'"
+
+after :stop do
+  OS::Process.kill('php-cgi', :KILL)
+end
+{% endhighlight %}
+
+`/etc/conf.d/lighttpd`:
+{% highlight yaml %}
+configuration: /etc/lighttpd/lighttpd.conf
+pid:           /var/run/lighttpd.pid
 {% endhighlight %}
 
 Making it clear for everyone, this doesn't mean you're forced to write your own init files in Ruby,
