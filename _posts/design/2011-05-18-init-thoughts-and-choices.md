@@ -71,8 +71,8 @@ needs 'net'
 this.is name: 'lighttpd',
   command: "lighttpd -f '#{config['configuration'] || '/etc/lighttpd/lighttpd.conf'}'"
 
-after :stop do
-  OS::Process.kill('php-cgi', :KILL)
+after :stop do |ok|
+  OS::Process.kill('php-cgi', :KILL) if ok
 end
 {% endhighlight %}
 
