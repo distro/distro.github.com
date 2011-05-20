@@ -19,8 +19,8 @@ These environment variables are needed for testing.
 
 Then you can start doing some things.
 
-    $ packo repository add git://github.com/distro/source-universe.git
-    $ packo repository add https://github.com/distro/binary-universe/raw/master/core2.xml
+    $ packo repository add "git; repository = git://github.com/distro/source.git; branch = universe"
+    $ packo repository add https://github.com/distro/binary/raw/master/core2.xml
 
 This adds two repositories and gives you some packages.
 
