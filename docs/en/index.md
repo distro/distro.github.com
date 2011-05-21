@@ -27,9 +27,10 @@ Contents
 
 {:class="contents"}
 * [Contributing](/docs/en/contributing.html#documentation)
-* [General concepts](/docs/en/general-concepts.html)
+* [General concepts](/docs/en/general-concepts/index.html)
 * + [Packages](/docs/en/general-concepts/packages.html)
 * + [Repositories](/docs/en/general-concepts/repositories.html)
+* + [Profiles](/docs/en/general-concepts/profiles.html)
 * [Packø](/docs/en/packo/index.html)
 * + [Quickstart Rbuild Guide](/docs/en/packo/quickstart.html)
 * + [Building Systems](/docs/en/packo/building-systems.html)

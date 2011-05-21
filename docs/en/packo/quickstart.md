@@ -12,7 +12,7 @@ the details or problems that will be encountered by developers — rather, it gi
 examples which may be of use when trying to grasp the basic idea of how rbuilds work.
 
 For proper coverage of all the ins and outs, see [Rbuild Writing](/docs/en/packo/rbuild-writing.html).
-The [General Concepts](/docs/en/general-concepts.html) chapter will also be of use. 
+The [General Concepts](/docs/en/general-concepts/index.html) chapter will also be of use. 
 
 Note that the examples used here, whilst based upon real tree rbuilds, have had several parts chopped
 out, changed and simplified.
