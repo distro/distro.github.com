@@ -31,6 +31,9 @@ Documentation
 One of the main needs right now is documentation, sure sounds weird working on documentation
 when you don't even know from where to start, but fear not! Just come hang out on [IRC](#irc).
 
+To contribute to the documentation you should fork [this](https://github.com/distro/distro.github.com),
+make your changes and open a pull request, then the changes can be reviewed and most probably merged.
+
 Writing
 -------
 If you want you can start understanding how to use packo and write some documentation about it,
@@ -38,7 +41,9 @@ or howtos or whatever, just open an issue or come into [IRC](#irc)
 
 Translating
 -----------
-Translations will be needed in the future, still not decided how to setup the localization.
+Translations are needed, to do it simply copy the `docs/en` directory to `docs/<yourlanguage>`
+and start translating the contents, remember to keep the file names the same or stuff will go deeply
+wrong.
 
 Ideas
 =====
