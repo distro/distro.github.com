@@ -52,5 +52,17 @@ gem, with packø you can simply add the virtual/gem repository and install packa
 transparently, dependencies and such are then coordinated by packø in an automagical way.
 
 The official Distrø repositories
-===============================
+================================
+Made clear that everyone can do their own repositories Distrø obviosly has some *official* repositories
+which are developed and checked by trusted people and developers.
 
+The binary repositories are based off the main source repository which has two branches.
+
+The `universe` branch is the set of rbuilds checked by trusted users or developers.
+
+The `multiverse` branch which keeps not yet checked rbuilds contributed by untrusted users.
+
+The checks of `multiverse` packages are made as soon as possible, keep in mind that some packages
+could be not accepted. Having a package rejected doesn't mean we hate you or anything, it's just
+that maybe the project is dead or seen as useless by the trusted userbase. We'll be glad to help
+you in creating your own repository and we'll happily link it in [this](/repositories.html) list.
