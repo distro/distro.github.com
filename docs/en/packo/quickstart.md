@@ -11,8 +11,8 @@ This page provides a very brief introduction to rbuild writing. It does not atte
 the details or problems that will be encountered by developers — rather, it gives some trivial
 examples which may be of use when trying to grasp the basic idea of how rbuilds work.
 
-For proper coverage of all the ins and outs, see [Rbuild Writing](/docs/packo/rbuild-writing.html).
-The [General Concepts](/docs/packo/general-concepts.html) chapter will also be of use. 
+For proper coverage of all the ins and outs, see [Rbuild Writing](/docs/en/packo/rbuild-writing.html).
+The [General Concepts](/docs/en/general-concepts.html) chapter will also be of use. 
 
 Note that the examples used here, whilst based upon real tree rbuilds, have had several parts chopped
 out, changed and simplified.
@@ -71,7 +71,7 @@ Usually you have at least two rbuilds, one that's general (ctags.rbuild) and one
 (ctags-5.8.rbuild), the latter inherits all the stuff from the former, you could put everything in
 the same rbuild, but with more versions you'd have tons of repeated stuff without a good reason.
 
-Rbuilds are indented using **two spaces**. See [Rbuild file format](/docs/packo/rbuild-format.html).
+Rbuilds are indented using **two spaces**. See [Rbuild file format](/docs/en/packo/rbuild-format.html).
 
 From now on the version specific rbuild won't be added if there's no good reason, just remember
 that a version specific rbuild is always there with definitions about what it is compatible with.
@@ -111,7 +111,7 @@ something readable by the `configure` script.
 The `do.doc` and `do.html` are helper functions for installing files into the relevant part of
 `/usr/share/doc`.
 
-Rbuilds can use other modules and callbacks (see [Rbuild Modules](/docs/packo/rbuild-modules.html)).
+Rbuilds can use other modules and callbacks (see [Rbuild Modules](/docs/en/packo/rbuild-modules.html)).
 In all cases, Packø provides a reasonable default implementation which quite often does the *right thing*.
 The was no need to do weird stuff for `:unpack`, for example you may need to `cd` into the right directory
 if the name of the directory inside the archive isn't called like the archive.
@@ -163,7 +163,7 @@ SANDBOX_WRITE="${HOME}/.packo"
 As you can see we have the usual informational variables and then a callback that refers to a
 package.filesystem variable.
 
-This variable is an [FFFS::FileSystem](/docs/packo/reference/FFFS::FileSystem.html) object and you can access the
+This variable is an [FFFS::FileSystem](/docs/en/packo/reference/FFFS::FileSystem.html) object and you can access the
 files by path.
 
 Files are defined after the `__END__` part, it should be pretty obvious how to use this feature by
@@ -210,7 +210,7 @@ The default is both, to specify it as build put a `!` at the end and `!!` for ru
 Rbuild with patches
 ===================
 Often we need to apply patches. This can be done in two ways, by adding a patches directory (in data/
-or embedded), these patches are used by the module [Building::Patch](/docs/packo/reference/Building::Patch.html)
+or embedded), these patches are used by the module [Building::Patch](/docs/en/packo/reference/Building::Patch.html)
 appropriately.
 
 {% highlight ruby %}
@@ -291,7 +291,7 @@ https://sourceforge.net/tracker/index.php?func=detail&aid=2166387&group_id=10161
 {% endhighlight %}
 
 For bigger sets of patches it's suggested to use archives, see
-[Building::Patch](/docs/packo/reference/Building::Patch.html) for more informations.
+[Building::Patch](/docs/en/packo/reference/Building::Patch.html) for more informations.
 
 Rbuild with features
 ====================
@@ -395,7 +395,7 @@ Package.define('sylpheed') {
 As you can see features have their own block and they can hook to callbacks like out of a feature.
 
 When in a feature block you have few helper methods to work with the feature, like enabling it by default
-or knowing if it's enabled or disabled. More details [here](/docs/packo/reference/Feature.html).
+or knowing if it's enabled or disabled. More details [here](/docs/en/packo/reference/Feature.html).
 
 `conf.enable` is used to enable or disable a feature, it will then be transormed into `--enable-something`
-or `--disable-something` as per `./configure`. More details [here](/docs/packo/reference/Building::Autotools.html#Configuration).
+or `--disable-something` as per `./configure`. More details [here](/docs/en/packo/reference/Building::Autotools.html#Configuration).
