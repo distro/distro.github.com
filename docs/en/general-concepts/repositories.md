@@ -14,7 +14,7 @@ and types.
 All of this because I believe that everyone should be able to easily create alternatives and
 completely different distributions from the same technology.
 
-Obviously th choices of the package manager aren't changeable, which means you have to like Ruby
+Obviously the choices of the package manager aren't changeable, which means you have to like Ruby
 or deal with it.
 
 There are three types of repositories, each one with their special capabilities.
@@ -50,3 +50,7 @@ Virtual repositories are really useful for wrapping other package managers to us
 CPAN or gem, usually other package managers have to create by hand ebuilds/whatever for every wanted
 gem, with packø you can simply add the virtual/gem repository and install packages through gem
 transparently, dependencies and such are then coordinated by packø in an automagical way.
+
+The official Distrø repositories
+===============================
+

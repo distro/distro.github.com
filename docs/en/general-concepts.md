@@ -11,3 +11,4 @@ with Distrø.
 {:class="contents"}
 + [Packages](/docs/en/general-concepts/packages.html)
 + [Repositories](/docs/en/general-concepts/repositories.html)
++ [Profiles](/docs/en/general-concepts/profiles.html)
