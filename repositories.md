@@ -18,6 +18,6 @@ Official
 
 None for the moment
 
-Uniffocial
+Unofficial
 ----------
 Nothing for the moment
