@@ -307,6 +307,8 @@ Package.define('sylpheed') {
 
   maintainer 'meh. <meh@paranoici.org>'
 
+  source 'http://sylpheed.sraoss.jp/sylpheed/v#{package.version.major}.#{package.version.minor}/sylpheed-#{package.version}.tar.bz2'
+
   dependencies << 'misc/mime-types' << 'misc/network/curl' << 'misc/x11/shared-mime-info'
 
   features {
