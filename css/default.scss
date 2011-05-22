@@ -39,6 +39,10 @@ a {
   &:hover {
     color: #a591b2;
   }
+
+  img {
+    border: 0;
+  }
 }
 
 h1, h2 {
@@ -225,6 +229,7 @@ ul.contents {
 
     & > a {
       position: relative;
+      left: -25px;
     }
 
     li {
