@@ -10,17 +10,11 @@ Packø
 packø is a package manager inspired by FreeBSD ports and Gentoo Portage which aims
 to be even more flexible and easy to work with.
 
-These environment variables are needed for testing.
-
-    export PACKO_DATABASE=sqlite:///tmp/packo_database
-    export PACKO_SELECTORS=/tmp/packo_selectors
-    export PACKO_REPOSITORIES=/tmp/packo_repositories
-    export PACKO_VERBOSE=true
-
 Then you can start doing some things.
 
-    $ packo repository add "git; repository = git://github.com/distro/source.git; branch = universe"
-    $ packo repository add https://github.com/distro/binary/raw/master/core2.xml
+    $ packo repository remote add https://github.com/distro/remotes/raw/master/official.yml
+    $ packo repository add source/universe
+    $ packo repository add binary/universe/linux/core2
 
 This adds two repositories and gives you some packages.
 
@@ -75,12 +69,12 @@ and `fakeroot` which is developed by Debian devs.
 Common problems
 ---------------
 
-*   If you get a huge error message about `sandbox` it means it tried to access some place it wasn't supposed
-    to, so sandbox killed the process to prevent damages, if you're sure you wanted it to access that place configure
-    `sandbox` to be able to do so. Read `sandbox`'s documentation to know how.
+* If you get a huge error message about `sandbox` it means it tried to access some place it wasn't supposed
+  to, so sandbox killed the process to prevent damages, if you're sure you wanted it to access that place configure
+  `sandbox` to be able to do so. Read `sandbox`'s documentation to know how.
 
-*   If you can't install `sandbox` and `fakeroot` you can use packo anyway, just don't use the protected syntax (packo `<command>`) but use
-    `packo-<command>` which is the not secure way. I suggest getting `sandbox` and `fakeroot` anyway because packages could do something harmful by mistake or on purpose, you can never know.
+* If you can't install `sandbox` and `fakeroot` you can use packo anyway, just don't use the protected syntax (packo `<command>`) but use
+  `packo-<command>` which is the not secure way. I suggest getting `sandbox` and `fakeroot` anyway because packages could do something harmful by mistake or on purpose, you can never know.
 
 It's slow as hell :(
 --------------------
