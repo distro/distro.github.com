@@ -54,8 +54,9 @@ How to install
 To install packo just clone the repo, build the gem and install it.
 
     $ git clone git://github.com/distro/packo.git
-    $ gem build packo/*spec
-    $ gem install packo/*gem
+    $ cd packo
+    $ gem build *spec
+    # gem install *gem
 
 And then install the adapter you want to use, to get a list of adapters do
 
