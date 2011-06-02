@@ -50,7 +50,6 @@ If you have a local .pko file you can install it directly:
 
 How to install
 --------------
-
 To install packo just clone the repo, build the gem and install it.
 
     $ git clone git://github.com/distro/packo.git
@@ -69,7 +68,6 @@ and `fakeroot` which is developed by Debian devs.
 
 Common problems
 ---------------
-
 * If you get a huge error message about `sandbox` it means it tried to access some place it wasn't supposed
   to, so sandbox killed the process to prevent damages, if you're sure you wanted it to access that place configure
   `sandbox` to be able to do so. Read `sandbox`'s documentation to know how.
@@ -79,7 +77,6 @@ Common problems
 
 It's slow as hell :(
 --------------------
-
 Actually it isn't, it's slow at starting because it has to require lot of stuff and the models have to be checked when required,
 so majority of the time is spent there. I'll probably implement a server/client thingy to speed things up.
 

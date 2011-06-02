@@ -23,7 +23,7 @@ So here's what I have in mind:
 
 Long version of `/etc/init.d/lighttpd`:
 {% highlight ruby %}
-#! /usr/bin/packo-service
+#! /usr/bin/packo-service-do
 
 needs 'net'
 
@@ -64,11 +64,11 @@ end
 
 Shorthand version of `/etc/init.d/lighttpd`:
 {% highlight ruby %}
-#! /usr/bin/packo-service
+#! /usr/bin/packo-service-do
 
 needs 'net'
 
-this.is name: 'lighttpd',
+this.is 'lighttpd',
   command: "lighttpd -f '#{config['configuration'] || '/etc/lighttpd/lighttpd.conf'}'"
 
 after :stop do |ok|
