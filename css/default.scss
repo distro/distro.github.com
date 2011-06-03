@@ -120,6 +120,10 @@ ul.contents {
 
   #content {
     padding: 5px;
+
+    * {
+      max-width: 100%;
+    }
   }
 }
 
