@@ -81,3 +81,7 @@ Scrittura del package manager
 -----------------------------
 Se credi che il package manager manchi di qualcosa o possa essere migliorato nella pagina
 [packø development](/docs/packo/development/index.html) vieni su [IRC](#irc) per iniziare a contribuire al package manager.
+
+<p><center>
+  <img src="/images/uncle_ditto.jpg"/>
+</center></p>

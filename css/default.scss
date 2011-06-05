@@ -63,40 +63,8 @@ ul.contents {
   padding-bottom: 10px;
 
   #header {
-    font-size: 123px;
-    text-align: center;
-    text-decoration: none !important;
-    color: black;
-    cursor: default;
-
-    #logo {
-      height: 0.6em;
-      position: relative;
-      top: 0.05em;
-    }
-
-    #phrase {
-      font-size: 18px;
-      vertical-align: middle;
-      white-space: nowrap;
-      display: inline;
-
-      .second {
-        display: inline;
-        position: relative;
-        top: 4px;
-        text-align: left;
-
-        td {
-          font-size: 12px;
-          font-style: italic;
-        }
-
-        .agnostic {
-          font-size: 18px;
-        }
-      }
-    }
+    color: black !important;
+    cursor: default !important;
   }
 
   #menu {

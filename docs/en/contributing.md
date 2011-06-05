@@ -85,3 +85,7 @@ Package manager writing
 If you think the package manager misses a feature or a module head to the
 [packø development](/docs/packo/development/index.html) page and come to [IRC](#irc) to start
 contributing to the package manager.
+
+<p><center>
+  <img src="/images/uncle_ditto.jpg"/>
+</center></p>
