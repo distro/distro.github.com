@@ -8,7 +8,7 @@ categories:
 layout: post
 ---
 
-One of the most important parts in a distribution is its configurability and it's ease of configuration.
+One of the most important parts in a distribution is its configurability and its ease of configuration.
 
 In this subject [Arch Linux](http://archlinux.org) is, in my opinion, one of the best. The way they
 unified all core configurations into the single `rc.conf` file is really elegant and simple, really
