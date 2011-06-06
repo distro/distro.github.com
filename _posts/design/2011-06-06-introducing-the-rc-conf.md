@@ -1,5 +1,5 @@
 ---
-title: Introducing the rc.conf
+title: "Introducing the <code>rc.conf</code>"
 author: meh.
 
 categories:
