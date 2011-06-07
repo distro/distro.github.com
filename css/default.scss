@@ -63,8 +63,28 @@ ul.contents {
   padding-bottom: 10px;
 
   #header {
-    color: black !important;
-    cursor: default !important;
+    a {
+      color: black !important;
+      cursor: default !important;
+    }
+  }
+
+  #languages {
+    position: fixed;
+    top: 2px;
+    right: 5px;
+
+    text-align: right;
+    padding-bottom: 4px;
+
+    .language {
+      margin-left: 5px;
+      padding: 0;
+
+      a.current {
+        border-bottom: 2px solid black;
+      }
+    }
   }
 
   #menu {
@@ -103,20 +123,6 @@ ul.contents {
 
   h2 {
     border-bottom: 1px dotted black;
-  }
-
-  .languages {
-    text-align: right;
-    padding-bottom: 4px;
-
-    .language {
-      margin-left: 5px;
-      padding: 0;
-
-      a.current {
-        border-bottom: 2px solid black;
-      }
-    }
   }
 
   .warning {

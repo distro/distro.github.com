@@ -1,0 +1,14 @@
+{% case page.lang %}
+    {% when 'it' %}
+        <a href="/">Home</a>
+        <a href="/it/docs/">Documentazione</a>
+        <a href="/it/contributing.html">Contribuisci</a>
+        <a href="/it/about.html">Informazioni</a>
+
+    {% else %}
+        <a href="/">Home</a>
+        <a href="/en/docs">Documentation</a>
+        <a href="/en/contributing.html">Contributing</a>
+        <a href="/en/about.html">About</a>
+
+{% endcase %}

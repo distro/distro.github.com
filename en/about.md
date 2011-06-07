@@ -1,6 +1,8 @@
 ---
 title: About Distrø
 layout: default
+
+lang: en
 ---
 
 Distrø aims to be **THE** distribution.

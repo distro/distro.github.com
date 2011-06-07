@@ -1,0 +1,12 @@
+{% case page.lang %}
+    {% when 'it' %}
+        <div class="warning">Questa pagina è un <b>abbozzo</b>,
+            <a href="/it/contributing.html#documentation">aiuta</a> ad espanderla e sistemarla.
+        </div>
+
+    {% else %}
+        <div class="warning">This page is a <b>stub</b>, please
+            <a href="/en/contributing.html#documentation">help</a> expanding and cleaning it.
+        </div>
+
+{% endcase %}

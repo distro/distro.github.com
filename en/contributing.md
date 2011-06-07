@@ -1,6 +1,6 @@
 ---
 title: Contributing to Distrø
-layout: documentation
+layout: default
 
 lang: en
 stub: true
@@ -41,7 +41,7 @@ or howtos or whatever, just open an issue or come into [IRC](#irc)
 
 Translating
 -----------
-Translations are needed, to do it simply copy the `docs/en` directory to `docs/<yourlanguage>`
+Translations are needed, to do it simply copy the `en/docs` directory to `<yourlanguage>/docs`
 and start translating the contents, remember to keep the file names the same or stuff will go deeply
 wrong.
 
@@ -61,7 +61,7 @@ can be of huge help. All the stuff of Distrø is Ruby driven, because Ruby is
 Rbuild writing
 --------------
 Being a young project with a new package manager this means tons of packages are missing,
-it's really easy to write rbuils, so head to the [quickstart](/docs/packo/quickstart.html) and
+it's really easy to write rbuils, so head to the [quickstart](/en/docs/packo/quickstart.html) and
 start writing rbuilds for your favourite packages. As usual coordination on [IRC](#irc) or through
 issues is advised (and wanted).
 
@@ -83,7 +83,7 @@ aren't a dick you will become trusted :)
 Package manager writing
 -----------------------
 If you think the package manager misses a feature or a module head to the
-[packø development](/docs/packo/development/index.html) page and come to [IRC](#irc) to start
+[packø development](/en/docs/packo/development/index.html) page and come to [IRC](#irc) to start
 contributing to the package manager.
 
 <p><center>

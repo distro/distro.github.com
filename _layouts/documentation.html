@@ -3,51 +3,7 @@ layout: default
 
 comments: true
 license: meh-cc
-
-languages:
-  - code: en
-  - code: it
 ---
-
-<div class="languages">
-    {% if page.stub %}
-        {% case page.lang %}
-
-        {% when 'en' %}
-            <div class="warning">This page is a <b>stub</b>, please
-                <a href="/docs/en/contributing.html#documentation">help</a> expanding and cleaning it.
-            </div>
-
-        {% when 'it' %}
-            <div class="warning">Questa pagina è un <b>abbozzo</b>,
-                <a href="/docs/it/contributing.html#documentation">aiuta</a> ad espanderla e sistemarla.
-            </div>
-
-        {% endcase %}
-    {% endif %}
-
-    {% for language in page.languages %}
-        {% assign code = language.code %}
-
-        {% if language.name %}
-            {% assign name = language.name %}
-        {% else %}
-            {% assign name = code %}
-        {% endif %}
-
-        {% capture old_prefix %}/docs/{{ page.lang }}/{% endcapture %}
-        {% capture new_prefix %}/docs/{{ code }}/{% endcapture %}
-
-        <span class="language">
-            <a href="{{ page.url | replace_first: old_prefix, new_prefix }}"
-                {% if page.lang == code %}
-                    class="current"
-                {% endif %}
-            >{{ name }}</a>
-        </span>
-    {% endfor %}
-</div>
-
 
 <div class="documentation">
     {{ content }}

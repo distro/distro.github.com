@@ -1,12 +1,15 @@
 ---
 title: Distrø
-layout: default
+lang: en
 
 tweets: 7
+
+layout: default
+unlocalized: true
 ---
 
 <div id="posts">
-  {% for post in site.posts limit:1 %}
+  {% for post in site.posts limit:3 %}
     <div class="post">
       <div class="header"><h2>
         <a href="{{ post.url }}">{{ post.title | format_text }}</a>

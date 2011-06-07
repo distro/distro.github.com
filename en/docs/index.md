@@ -13,7 +13,7 @@ detailed, up to date technical content.
 
 Contributors
 ------------
-Contributions are encouraged. See the [contributing](/docs/en/contributing.html#documentation) section for how to get started.
+Contributions are encouraged. See the [contributing](/en/contributing.html#documentation) section for how to get started.
 
 If you have any corrections, suggestions or improvements please open an issue
 [here](https://github.com/distro/distro.github.com/issues).
@@ -26,11 +26,10 @@ Contents
 --------
 
 {:class="contents"}
-* [Contributing](/docs/en/contributing.html#documentation)
-* [General concepts](/docs/en/general-concepts/index.html)
-* + [Packages](/docs/en/general-concepts/packages.html)
-* + [Repositories](/docs/en/general-concepts/repositories.html)
-* + [Profiles](/docs/en/general-concepts/profiles.html)
-* [Packø](/docs/en/packo/index.html)
-* + [Quickstart Rbuild Guide](/docs/en/packo/quickstart.html)
-* + [Building Systems](/docs/en/packo/building-systems.html)
+* [General concepts](/en/docs/general-concepts/index.html)
+* + [Packages](/en/docs/general-concepts/packages.html)
+* + [Repositories](/en/docs/general-concepts/repositories.html)
+* + [Profiles](/en/docs/general-concepts/profiles.html)
+* [Packø](/en/docs/packo/index.html)
+* + [Quickstart Rbuild Guide](/en/docs/packo/quickstart.html)
+* + [Building Systems](/en/docs/packo/building-systems.html)
