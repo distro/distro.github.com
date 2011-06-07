@@ -24,10 +24,9 @@ Perché Mac OS?
 -----------
 Beh, come detto prima Linux già possiede dei package manager ben fatti, così preferisco come obbiettivo i sistemi che personalmente ne sono privati o che possiedono un sistema mal pensato (parere di meh).
 
-The package managers that are around for Mac OS aren't really good or flexible as packø, so I think it will be cool to support macfags :)
 I package manager che sono attualmente in circolazione per Mac OS mancano di flessibilità e spesso sono mal pensati, quindi credo che sarà una cosa buona anche per la soffisfazione dei macfags :)
 
-Why another distribution?
+Perché un'altra distro?
 -------------------------
 Because I'm not fully happy with what we've got, Gentoo theoretically is the perfect system but its implementation isn't.
 
