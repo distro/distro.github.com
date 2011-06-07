@@ -2,7 +2,7 @@
 title: Informazioni Distrø
 layout: default
 
-lang: en
+lang: it
 ---
 
 Distrø ha come obbiettivo quello di essere ** LA ** distribuzione.
