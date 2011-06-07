@@ -35,6 +35,33 @@ languages:
     </head>
 
     <body>
+        {% unless page.unlocalized %}<div id="languages">
+            {% for language in page.languages %}
+                {% assign code = language.code %}
+
+                {% if language.name %}
+                    {% assign name = language.name %}
+                {% else %}
+                    {% assign name = code %}
+                {% endif %}
+
+                {% unless page.lang %}
+                  {% capture page.lang %}en{% endcapture %}
+                {% endunless %}
+
+                {% capture old_prefix %}/{{ page.lang }}/{% endcapture %}
+                {% capture new_prefix %}/{{ code }}/{% endcapture %}
+
+                <span class="language">
+                    <a href="{{ page.url | replace_first: old_prefix, new_prefix }}"
+                        {% if page.lang == code %}
+                            class="current"
+                        {% endif %}
+                    >{{ name }}</a>
+                </span>
+            {% endfor %}
+        </div>{% endunless %}
+
         <div id="container">
             <div id="header"><a href="/"><div style="text-align: center; margin: 0; padding: 0;">
                 <div style="height: 143px; font-size: 12px; min-width: 760px; max-width: 800px; margin: 0 auto; font-weight: bold;">
@@ -56,32 +83,7 @@ languages:
                 </div>
             </div></a></div>
 
-            {% unless page.unlocalized %}<div id="languages">
-                {% for language in page.languages %}
-                    {% assign code = language.code %}
-
-                    {% if language.name %}
-                        {% assign name = language.name %}
-                    {% else %}
-                        {% assign name = code %}
-                    {% endif %}
-
-                    {% unless page.lang %}
-                      {% capture page.lang %}en{% endcapture %}
-                    {% endunless %}
-
-                    {% capture old_prefix %}/{{ page.lang }}/{% endcapture %}
-                    {% capture new_prefix %}/{{ code }}/{% endcapture %}
-
-                    <span class="language">
-                        <a href="{{ page.url | replace_first: old_prefix, new_prefix }}"
-                            {% if page.lang == code %}
-                                class="current"
-                            {% endif %}
-                        >{{ name }}</a>
-                    </span>
-                {% endfor %}
-            </div>{% endunless %}
+            <div style="clear: both;"></div>
 
             <div id="menu">
                 {% include menu.html %}

@@ -57,6 +57,24 @@ ul.contents {
   }
 }
 
+#languages {
+  position: fixed;
+  top: 2px;
+  right: 5px;
+
+  text-align: right;
+  padding-bottom: 4px;
+
+  .language {
+    margin-left: 5px;
+    padding: 0;
+
+    a.current {
+      border-bottom: 2px solid black;
+    }
+  }
+}
+
 #container {
   width: 80%;
   margin: 0 auto;
@@ -66,24 +84,6 @@ ul.contents {
     a {
       color: black !important;
       cursor: default !important;
-    }
-  }
-
-  #languages {
-    position: fixed;
-    top: 2px;
-    right: 5px;
-
-    text-align: right;
-    padding-bottom: 4px;
-
-    .language {
-      margin-left: 5px;
-      padding: 0;
-
-      a.current {
-        border-bottom: 2px solid black;
-      }
     }
   }
 
@@ -125,10 +125,17 @@ ul.contents {
     border-bottom: 1px dotted black;
   }
 
-  .warning {
-    margin-top: 5px;
-    color: #b21818;
-    float: left;
+  .types {
+    text-align: right;
+
+    .warning {
+      margin-top: 5px;
+      color: #b21818;
+
+      a {
+        color: #b21818 !important;
+      }
+    }
   }
 
   ul {

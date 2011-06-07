@@ -26,7 +26,6 @@ Contents
 --------
 
 {:class="contents"}
-* [Contribuire](/it/docs/contributing.html#documentation)
 * [Concetti Generali](/it/docs/general-concepts/index.html)
 * + [Pacchetti](/it/docs/general-concepts/packages.html)
 * + [Repositories](/it/docs/general-concepts/repositories.html)
