@@ -28,16 +28,16 @@ I package manager che sono attualmente in circolazione per Mac OS mancano di fle
 
 Perché un'altra distro?
 -------------------------
-Because I'm not fully happy with what we've got, Gentoo theoretically is the perfect system but its implementation isn't.
+Perché non sono soddisfatto delle attuali distribuzioni, Gentoo in linea teorica è la perfezione, ma il suo difetto sta nell'implementazione pratica.
 
-We're going on with stuff that was written 10/20 years ago, and it was really good 10/20 years ago, but now it sucks pretty much.
+Stiamo usando prodotti che sono stati scritti 10/20 anni fa, che in questo periodo di tempo sono andati benissimo e hanno fatto realmente un qualcosa di importante e grande, ma oggi è necessario un qualcosa di nuovo e migliore.
 
-You can keep putting layer over layer but it will still suck at the core, the best thing to do is restart with the latest technologies and cool things.
+Noi possiamo continuare a costruire un sistema layer su layer, ma in questo modo ci dimentichiamo del core che è realmente ciò che fa funzionare il tutto, quindi è meglio per me ripartire con le ultime tecnologie e i prodotti migliori che oggi ci possono essere offerti.
 
-So I thought about making something easier to maintain and develop, being in love with Ruby I started writing packø which is a really cool package manager in my opinion.
+Così ho pensato di creare un qualcosa di realmente semplice da mantenere e sviluppare. Quindi usando il mio linguaggio di programmazione preferito, Ruby, ho iniziato a sviluppare Packø un package manager a mio parere davvero interessante.
 
-And here I am, coding alone and trying to come up with something usable for myself first, and then for others.
+Ed eccomi qui, solo davanti al codice, a costruire un qualcosa di utile prima di tutto a me stesso e poi a chi vorrà utilizzarlo.
 
-Why should I care about this?
+Perché dovrei preoccuparmi di tutto questo?
 -----------------------------
-You shouldn't, really, go use Ubuntu.
+Non si dovrebbe, in realtà, utilizzate pure Ubuntu.
