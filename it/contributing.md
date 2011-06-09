@@ -41,7 +41,7 @@ aprendo una issue o venendo su [IRC](#irc)
 
 Traduzioni
 ----------
-C'e' bisogno di traduzioni, semplicemente copiate i `docs/en` directory su `docs/<yourlanguage>`
+C'e' bisogno di traduzioni, semplicemente copiate i `en/docs` directory su `<yourlanguage>/docs`
 e iniziate a tradurre i contenuti, ricordate di mantenere i nomi dei file o andra' tutto a farsi fottere.
 
 Idee

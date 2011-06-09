@@ -9,6 +9,6 @@ This section covers some general concepts with which you should be familiar when
 with Distrø.
 
 {:class="contents"}
-+ [Packages](/docs/en/general-concepts/packages.html)
-+ [Repositories](/docs/en/general-concepts/repositories.html)
-+ [Profiles](/docs/en/general-concepts/profiles.html)
++ [Packages](/en/docs/general-concepts/packages.html)
++ [Repositories](/en/docs/general-concepts/repositories.html)
++ [Profiles](/en/docs/general-concepts/profiles.html)
