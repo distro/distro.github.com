@@ -73,4 +73,4 @@ system:
 {% endhighlight %}
 
 If you have any ideas related to this, don't hesitate to comment or come join us on
-[IRC](/en/docs/contributing.html#irc).
+[IRC](/en/contributing.html#irc).
