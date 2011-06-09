@@ -24,7 +24,7 @@ with, **HIGHLY** _inspired_ by Arch's `rc.conf`.
 ---
 
 general:
-  # available languages can be listed with the `local -a` command
+  # available languages can be listed with the `locale -a` command
   locale: en_US.UTF-8
 
   # set to "UTC" or "local", any other value will result in the hwclock untouched
