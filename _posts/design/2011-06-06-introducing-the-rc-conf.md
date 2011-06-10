@@ -64,9 +64,6 @@ system:
     btrfs: false # enables btrfs
     lvm:   false # enables LVM2
 
-  # array of modules to load at boot, prefix with a - to blacklist
-  modules: [-pcspkr]
-
   # prefix with a - to disable it
   # prefix with a @ to start it up in the background
   daemons: [syslog-ng, crond]
