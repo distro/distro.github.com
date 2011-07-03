@@ -6,7 +6,7 @@ lang: it
 stub: true
 ---
 
-Contributing
+Contribuzione
 ============
 Vuoi essere coinvolto nello sviluppo di Distrø ma non sai da dove iniziare?
 
@@ -26,8 +26,8 @@ Github
 Tutto il codice appare su [github](http://github.com/distro), aprite un'issue se trovate qualcosa,
 nessuno vi mordera' :)
 
-Documentation
-=============
+Documentazione
+==============
 Uno dei principale bisogni ora e' quello di documentazione, suona sicuramente male parlare di documentazione
 quando non si sa da dove partire, ma non temete! Joinate su  [IRC](#irc).
 
