@@ -7,7 +7,7 @@ lang: it
 
 Distrø ha come obbiettivo quello di essere ** LA ** distribuzione.
 
-Kernel agnostica, libc agnostica, compilatore agnostica.
+Agnostica da kernel, libc e compilatore.
 
 I principali sistemi operativi interessati sono Linux, Windows e Mac OS.
 
@@ -38,6 +38,6 @@ Così ho pensato di creare un qualcosa di realmente semplice da mantenere e svil
 
 Ed eccomi qui, solo davanti al codice, a costruire un qualcosa di utile prima di tutto a me stesso e poi a chi vorrà utilizzarlo.
 
-Perché dovrei preoccuparmi di tutto questo?
+Perché dovrebbe interessarmi?
 -----------------------------
-Non si dovrebbe, in realtà, utilizzate pure Ubuntu.
+Non per forza, dai, torna a usare Ubuntu.
