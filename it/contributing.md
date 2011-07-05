@@ -46,7 +46,7 @@ e iniziate a tradurre i contenuti, ricordate di mantenere i nomi dei file o andr
 
 Idee
 ====
-Hai alcune idee that che vorresti vedere in una distribuzione, ma le altre sono troppo impegnate
+Hai alcune idee che vorresti vedere in una distribuzione, ma le altre sono troppo impegnate
 con altre cose e se ne fregano di te? Beh, stiamo cercando buone idee e miglioramenti alla vita informatica,
 vieni su [IRC](#irc) e fai una proposta, saremo felici di ascoltarla, e magari di renderla realta'.
 
