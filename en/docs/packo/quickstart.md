@@ -24,41 +24,40 @@ We'll start with an rbuild for the Exuberant Ctags utility, a source code indexi
 ctags.rbuild:
 
 {% highlight ruby %}
-Package.define('ctags') {
-  tags 'application', 'development', 'utility'
+maintainer 'meh. <meh@paranoici.org>'
 
-  description 'Exuberant ctags generates tags files for quick source navigation.'
-  homepage    'http://ctags.sourceforge.net'
-  license     'GPL-2'
+name 'ctags'
+tags 'application', 'development', 'utility'
 
-  maintainer 'meh. <meh@paranoici.org>'
+description 'Exuberant ctags generates tags files for quick source navigation.'
+homepage    'http://ctags.sourceforge.net'
+license     'GPL-2'
 
-  source 'sourceforge://ctags/ctags/#{package.version}/ctags-#{package.version}'
+source 'sourceforge://ctags/ctags/#{package.version}/ctags-#{package.version}'
 
-  before :configure do |conf|
-    conf.enable 'tmpdir', '/tmp'
+before :configure do |conf|
+	conf.enable 'tmpdir', '/tmp'
 
-    conf.disable ['etags']
-    conf.with    ['posix-regex']
-    conf.without ['readlib']
-  end
+	conf.disable ['etags']
+	conf.with    ['posix-regex']
+	conf.without ['readlib']
+end
 
-  after :install do |conf|
-    package.do.doc 'FAQ', 'NEWS', 'README'
-    package.do.html 'EXTENDING.html', 'ctags.html'
-  end
-}
+after :install do |conf|
+	package.do.doc 'FAQ', 'NEWS', 'README'
+	package.do.html 'EXTENDING.html', 'ctags.html'
+end
 {% endhighlight %}
 
 ctags-5.8.rbuild
 
 {% highlight ruby %}
-Package.define('ctags', '5.8') {
-  arch     'x86', 'x86_64'
-  kernel   'linux', 'windows'
-  compiler 'gcc'
-  libc     'glibc'
-}
+version '5.8'
+
+arch     'x86', 'x86_64'
+kernel   'linux', 'windows'
+compiler 'gcc'
+libc     'glibc'
 {% endhighlight %}
 
 Basic format
@@ -127,22 +126,21 @@ If the files are small, like patches or short configuration examples it's sugges
 embedding facilities rather than having a data directory floating around.
 
 {% highlight ruby %}
-Package.define('sandbox') {
-  tags 'application', 'system'
+maintainer 'meh. <meh@paranoici.org>'
 
-  description "Gentoo's sandbox utility for more secure package building"
-  homepage    'http://www.gentoo.org/'
-  license     'GPL-2'
+name 'sandbox'
+tags 'application', 'system'
 
-  maintainer 'meh. <meh@paranoici.org>'
+description "Gentoo's sandbox utility for more secure package building"
+homepage    'http://www.gentoo.org/'
+license     'GPL-2'
 
-  source 'http://dev.gentoo.org/~vapier/dist/sandbox-#{package.version}.tar.xz'
+source 'http://dev.gentoo.org/~vapier/dist/sandbox-#{package.version}.tar.xz'
 
-  after :install do
-    File.write("#{package.distdir}/etc/sandbox.d/09sandbox", package.filesystem['files/sandbox'])
-    File.write("#{package.distdir}/etc/sandbox.d/10packo", package.filesystem['files/packo'])
-  end
-}
+after :install do
+	File.write("#{package.distdir}/etc/sandbox.d/09sandbox", package.filesystem['files/sandbox'])
+	File.write("#{package.distdir}/etc/sandbox.d/10packo", package.filesystem['files/packo'])
+end
 
 __END__
 $$$
@@ -177,26 +175,25 @@ ctags only needs a basic toolchain to compile and run. However, life is rarely t
 Here's `application/system/detox`:
 
 {% highlight ruby %}
-Package.define('detox') {
-  tags 'application', 'system'
+name 'detox'
+tags 'application', 'system'
 
-  description 'Safely remove spaces and strange characters from filenames'
-  homepage    'http://detox.sourceforge.net/'
-  license     'BSD'
+description 'Safely remove spaces and strange characters from filenames'
+homepage    'http://detox.sourceforge.net/'
+license     'BSD'
 
-  dependencies << 'development/library/popt' << 'system/development/flex!' << 'system/development/bison!'
+dependencies << 'development/library/popt' << 'system/development/flex!' << 'system/development/bison!'
 
-  source 'sourceforge://detox/detox/#{package.version}/detox-#{package.version}'
+source 'sourceforge://detox/detox/#{package.version}/detox-#{package.version}'
 
-  before :configure do |conf|
-    conf.with ['popt']
-  end
+before :configure do |conf|
+	conf.with ['popt']
+end
 
-  after :install do |conf|
-    package.do.rm '/etc/detoxrc.sample'
-    package.do.doc 'README', 'CHANGES'
-  end
-}
+after :install do |conf|
+	package.do.rm '/etc/detoxrc.sample'
+	package.do.doc 'README', 'CHANGES'
+end
 {% endhighlight %}
 
 Again, you can see the rbuild various informational variables.
@@ -214,26 +211,25 @@ or embedded), these patches are used by the module [Building::Patch](/en/docs/pa
 appropriately.
 
 {% highlight ruby %}
-Package.define('detox') {
-  tags 'application', 'system'
+name 'detox'
+tags 'application', 'system'
 
-  description 'Safely remove spaces and strange characters from filenames'
-  homepage    'http://detox.sourceforge.net/'
-  license     'BSD'
+description 'Safely remove spaces and strange characters from filenames'
+homepage    'http://detox.sourceforge.net/'
+license     'BSD'
 
-  dependencies << 'development/library/popt' << 'system/development/flex!' << 'system/development/bison!'
+dependencies << 'development/library/popt' << 'system/development/flex!' << 'system/development/bison!'
 
-  source 'sourceforge://detox/detox/#{package.version}/detox-#{package.version}'
+source 'sourceforge://detox/detox/#{package.version}/detox-#{package.version}'
 
-  before :configure do |conf|
-    conf.with ['popt']
-  end
+before :configure do |conf|
+	conf.with ['popt']
+end
 
-  after :install do |conf|
-    package.do.rm '/etc/detoxrc.sample'
-    package.do.doc 'README', 'CHANGES'
-  end
-}
+after :install do |conf|
+	package.do.rm '/etc/detoxrc.sample'
+	package.do.doc 'README', 'CHANGES'
+end
 
 __END__
 $$$
@@ -298,99 +294,99 @@ Rbuild with features
 Now for some `features`. Here's `application/mail/client/sylpheed`.
 
 {% highlight ruby %}
-Package.define('sylpheed') {
-  tags 'application', 'mail', 'client'
+maintainer 'meh. <meh@paranoici.org>'
 
-  description 'A lightweight email client and newsreader'
-  homepage    'http://sylpheed.sraoss.jp/'
-  license     'GPL-2', 'LGPL-2.1'
+name 'sylpheed'
+tags 'application', 'mail', 'client'
 
-  maintainer 'meh. <meh@paranoici.org>'
+description 'A lightweight email client and newsreader'
+homepage    'http://sylpheed.sraoss.jp/'
+license     'GPL-2', 'LGPL-2.1'
 
-  source 'http://sylpheed.sraoss.jp/sylpheed/v#{package.version.major}.#{package.version.minor}/sylpheed-#{package.version}.tar.bz2'
+source 'http://sylpheed.sraoss.jp/sylpheed/v#{package.version.major}.#{package.version.minor}/sylpheed-#{package.version}.tar.bz2'
 
-  dependencies << 'misc/mime-types' << 'misc/network/curl' << 'misc/x11/shared-mime-info'
+dependencies << 'misc/mime-types' << 'misc/network/curl' << 'misc/x11/shared-mime-info'
 
-  features {
-    ipv6 {
-      before :configure do |conf|
-        conf.enable 'ipv6', enabled?
-      end
-    }
+features {
+	ipv6 {
+		before :configure do |conf|
+			conf.enable 'ipv6', enabled?
+		end
+	}
 
-    ssl {
-      before :configure do |conf|
-        conf.enable 'ssl', enabled?
-      end
-    }
+	ssl {
+		before :configure do |conf|
+			conf.enable 'ssl', enabled?
+		end
+	}
 
-    crypt {
-      before :dependecies do |deps|
-        deps << 'application/crypt/gpgme'
-      end
+	crypt {
+		before :dependecies do |deps|
+			deps << 'application/crypt/gpgme'
+		end
 
-      before :configure do |conf|
-        conf.enable 'gpgme', enabled?
+		before :configure do |conf|
+			conf.enable 'gpgme', enabled?
 
-        if disabled?
-          Do.cp 'ac/missing/gpgme.m4', 'ac/'
-        end
-      end
-    }
+			if disabled?
+				Do.cp 'ac/missing/gpgme.m4', 'ac/'
+			end
+		end
+	}
 
-    ldap {
-      before :configure do |conf|
-        conf.enable 'ldap', enabled?
-      end
-    }
+	ldap {
+		before :configure do |conf|
+			conf.enable 'ldap', enabled?
+		end
+	}
 
-    nls
+	nls
 
-    pda {
-      before :dependencies do |deps|
-        deps << 'application/pda/jpilot'
-      end
+	pda {
+		before :dependencies do |deps|
+			deps << 'application/pda/jpilot'
+		end
 
-      before :configure do |conf|
-        conf.enable 'jpilot', enabled?
-      end
-    }
+		before :configure do |conf|
+			conf.enable 'jpilot', enabled?
+		end
+	}
 
-    spell {
-      before :dependencies do |deps|
-        deps << 'application/text/gtkspell'
-      end
+	spell {
+		before :dependencies do |deps|
+			deps << 'application/text/gtkspell'
+		end
 
-      before :configure do |conf|
-        conf.enable 'gtkspell', enabled?
-      end
-    }
+		before :configure do |conf|
+			conf.enable 'gtkspell', enabled?
+		end
+	}
 
-    xface {
-      before :dependencies do |deps|
-        deps << 'library/media/compface!'
-      end
+	xface {
+		before :dependencies do |deps|
+			deps << 'library/media/compface!'
+		end
 
-      before :configure do |conf|
-        conf.enable 'compface', enabled?
-      end
-    }
-  }
+		before :configure do |conf|
+			conf.enable 'compface', enabled?
+		end
+	}
+}
 
-  before :configure do |conf|
-    autotools.autoreconf
+before :configure do |conf|
+	autotools.autoreconf
 
-    htmldir = Path.clean("/usr/share/doc/sylpheed-#{package.version}")
+	htmldir = Path.clean("/usr/share/doc/sylpheed-#{package.version}")
 
-    conf.with 'manualdir', "#{htmldir}/manual"
-    conf.with 'faqdir',    "#{htmldir}/faq"
+	conf.with 'manualdir', "#{htmldir}/manual"
+	conf.with 'faqdir',    "#{htmldir}/faq"
 
-    conf.disable 'updatecheck'
-  end
+	conf.disable 'updatecheck'
+end
 
-  after :install do |conf|
-    package.do.doc 'AUTHORS', 'ChangeLog*', 'NEWS*', 'README*', 'TODO*'
-  end
+after :install do |conf|
+	package.do.doc 'AUTHORS', 'ChangeLog*', 'NEWS*', 'README*', 'TODO*'
+end
 }
 {% endhighlight %}
 
