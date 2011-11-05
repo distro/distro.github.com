@@ -45,5 +45,5 @@ called `package` which contains the package instance in `packages` and `config`.
 `features`
 ----------
 `features` is a directory which contains default definitions for features, the files have to be named
-ater the feature name they want to describe, this is useful to make some features default to adding
+after the feature name they want to describe, this is useful to make some features default to adding
 `description` and `dependencies`.
