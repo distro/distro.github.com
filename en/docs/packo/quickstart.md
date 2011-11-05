@@ -62,13 +62,17 @@ libc     'glibc'
 
 Basic format
 ------------
-As you can see, rbuilds are just **Ruby** scripts that are executed withing packo's library.
+As you can see, rbuilds are just **Ruby** scripts that are executed within packo's library.
 It's suggested to know at least the basics of Ruby, if you don't know it this is a good chance
 to learn something new.
 
 Usually you have at least two rbuilds, one that's general (ctags.rbuild) and one for the version
 (ctags-5.8.rbuild), the latter inherits all the stuff from the former, you could put everything in
 the same rbuild, but with more versions you'd have tons of repeated stuff without a good reason.
+
+The version can (and should) be omitted in rbuilds that go in the tree, this is because the version is
+implicitly defined by the file name. If you're writing a single rbuild with a random name you *should*
+define the version, otherwise it wouldn't know what to build.
 
 Rbuilds are indented using **two spaces**. See [Rbuild file format](/en/docs/packo/rbuild-format.html).
 
@@ -91,8 +95,9 @@ The `maintainer` variable tells who to talk with in case of bugs in the rbuild.
 
 The `source` tells Packø the address to use for downloading the source. Here `sourceforge://` is a
 special notation meaning "use the sourceforge fetcher", stuff between #{} will be interpolated
-at the right time, so `#{package.version}` will become `5.8` when interpolated. Remember to not use
-string that gets interpolated when defined, check a Ruby reference to know which ones get interpolated.
+at the right time, so `#{package.version}` will become `5.8` when interpolated. Remember not to use
+the literal notation that gets interpolated when defined, check a Ruby reference to know which ones
+get interpolated.
 
 Callbacks
 ---------
@@ -100,8 +105,8 @@ Next, we register a callback to be called before `:configure`, Packø will call 
 executing the configure stage. The passed `conf` variable is a Configuration object defined by the
 `Building::Autotools` module.
 
-You can stop the whole callback dispatching by calling `throw :halt` in the callback, in this way you
-can override the default configure execution with something different.
+You can stop the whole callback dispatching by calling `skip` in the callback, in this way you
+can override the default `configure` execution with something different.
 
 `./configure`, `make` and `make install` are called appropiately by the `Building::Autotools` module,
 all you have to do is set what's need in the `conf` object and when needed it will be converted to
@@ -112,7 +117,7 @@ The `do.doc` and `do.html` are helper functions for installing files into the re
 
 Rbuilds can use other modules and callbacks (see [Rbuild Modules](/en/docs/packo/rbuild-modules.html)).
 In all cases, Packø provides a reasonable default implementation which quite often does the *right thing*.
-The was no need to do weird stuff for `:unpack`, for example you may need to `cd` into the right directory
+There was no need to do weird stuff for `:unpack`, for example you may need to `cd` into the right directory
 if the name of the directory inside the archive isn't called like the archive.
 
 Rbuild with files
@@ -390,7 +395,7 @@ end
 }
 {% endhighlight %}
 
-As you can see features have their own block and they can hook to callbacks like out of a feature.
+As you can see features have their own block and they can hook to callbacks as it was in the toplevel.
 
 When in a feature block you have few helper methods to work with the feature, like enabling it by default
 or knowing if it's enabled or disabled. More details [here](/en/docs/packo/reference/Feature.html).

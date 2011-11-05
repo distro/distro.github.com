@@ -25,7 +25,7 @@ So far the features are:
 - packages divided by tags instead of categories, with obvious search by tags with boolean operators
 - designed from the start with usage with multiple repositories in mind, so it's super easy to manage repositories
 - automatically create a binary repository from a source repository (useful for usage in a network, you can tell the package manager what features/configuration to use to build the packages you need so you don't have an internet connection as requirement, or well, it's always useful to have the chance to create your own repositories)
-- (again, i know this won't be liked, but meh) everything is written in Ruby and it's designed like a library (like portage or pacman) so it's easy to extend and hack on it (no, it's not slow, at least it's not slower than portage, with Rubinius it will be even faster)
+- (again, I know this won't be liked, but meh) everything is written in Ruby and it's designed like a library (like portage or pacman) so it's easy to extend and hack on it (no, it's not slow, at least it's not slower than portage, with Rubinius it will be even faster)
 
 Planned features:
 - keep the system synced package and configuration wise by using, for example, a postgresql database to store data, and then just throw a --sync command and it will sync everything

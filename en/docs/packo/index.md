@@ -48,7 +48,7 @@ To get more informations about packages do
 
     $ packo repository info "(library)"
 
-This will give a lot of informations about the package.
+This will give a lot of information about the package.
 
 You can also build packages into .pko files.
 
@@ -80,7 +80,7 @@ Common problems
   `sandbox` to be able to do so. Read `sandbox`'s documentation to know how.
 
 * If you can't install `sandbox` and `fakeroot` you can use packo anyway, just don't use the protected syntax (packo `<command>`) but use
-  `packo-<command>` which is the not secure way. I suggest getting `sandbox` and `fakeroot` anyway because packages could do something harmful by mistake or on purpose, you can never know.
+  `packo-<command>` which is the unsecure way. I suggest getting `sandbox` and `fakeroot` anyway because packages could do something harmful by mistake or on purpose, you can never know.
 
 It's slow as hell :(
 --------------------
