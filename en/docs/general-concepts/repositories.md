@@ -24,7 +24,7 @@ Source repositories
 Source repositories are the base of Distrø and they're pretty similar to Gentoo trees.
 
 When installing from a source repository the package gets compiled and transformed into an
-intallable package (usually a `.pko`).
+installable package (usually a `.pko`).
 
 The binary package is then installed like it was coming from a binary package.
 
