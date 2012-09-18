@@ -19,7 +19,7 @@ The main form of communication is on [IRC](#irc)
 
 IRC
 ---
-The main IRC channel is `##distro` on `irc.freenode.net`.
+The main IRC channel is `#distro` on `irc.freenode.net`.
 
 Github
 ------

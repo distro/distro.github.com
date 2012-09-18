@@ -18,7 +18,7 @@ La principal forma de comunicación es [IRC](#irc)
 
 IRC
 ---
-El channel es `##distro` en `irc.freenode.net`.
+El channel es `#distro` en `irc.freenode.net`.
 
 Github
 ------
