@@ -61,7 +61,7 @@ can be of huge help. All the stuff of Distrø is Ruby driven, because Ruby is
 Rbuild writing
 --------------
 Being a young project with a new package manager this means tons of packages are missing,
-it's really easy to write rbuils, so head to the [quickstart](/en/docs/packo/quickstart.html) and
+it's really easy to write rbuilds, so head to the [quickstart](/en/docs/packo/quickstart.html) and
 start writing rbuilds for your favourite packages. As usual coordination on [IRC](#irc) or through
 issues is advised (and wanted).
 
